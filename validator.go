@@ -1,4 +1,4 @@
-package webfw
+package wfw
 
 import (
 	"errors"
