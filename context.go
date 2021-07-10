@@ -91,3 +91,10 @@ func (c *Context) HTML(code int, name string, data interface{}) {
 		c.Fail(500, err.Error())
 	}
 }
+
+func (c *Context) ShoudBind(obj interface{}) error {
+	c.Req.Header.Get("Content-Type")
+	// binding
+	bind := Default(c.Method,c.Req.Header.Get("Content-Type"))
+	return bind.Bind(c.Req,obj)
+}

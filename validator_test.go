@@ -26,15 +26,15 @@ type Address struct {
 
 func TestValidator(t *testing.T) {
 	address := &Address{
-		Street: "Eavesdown Docks",
-		Planet: "Persphone",
+		Street: "People road",
+		Planet: "none",
 		Phone:  "none",
 	}
 	user := &User{
-		FirstName:      "www",
-		LastName:       "Smith",
-		Age:            135,
-		Email:          "Badger.Smith@gmail.com",
+		FirstName:      "tom",
+		LastName:       "sean",
+		Age:             24,
+		Email:          "xxxxx@gmail.com",
 		FavouriteColor: "#000-",
 		Addresses:      []*Address{address},
 	}
