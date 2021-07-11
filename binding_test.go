@@ -31,7 +31,7 @@ func TestJsonBinding_Bind(t *testing.T) {
 	if err != nil {
 		t.Fatal("fail",err.Error())
 	}
-	if !assert.EqualValues(t,p,personResponse){
+	if !assert.Equal(t,p,personResponse){
 		t.Fatal("fail")
 	}
 
