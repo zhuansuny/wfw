@@ -2,7 +2,6 @@ package orm
 
 import (
 	"database/sql"
-	"wfw/orm/session"
 )
 
 type Engine struct {
@@ -21,10 +20,6 @@ func NewEngine(driver, source string) (e *Engine, err error) {
 	return
 }
 
-func (engine *Engine) Close()(err error) {
-	return  engine.db.Close()
-}
-
-func (engine *Engine) NewSession() *session.Session {
-	return session.New(engine.db)
+func (engine *Engine) Close() (err error) {
+	return engine.db.Close()
 }
